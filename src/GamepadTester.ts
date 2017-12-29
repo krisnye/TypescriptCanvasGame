@@ -26,11 +26,11 @@ class TestBullet extends GameElement {
     }
     render(c: CanvasRenderingContext2D) {
         let radius = 20
-        c.fillStyle = "rgb(0,0,200)"
+        c.fillStyle = "rgb(232, 227, 220)"
         c.beginPath()
         c.arc(this.x, this.y, radius, 0, Math.PI * 2)
         c.fill()
-        c.fillStyle = "rgb(255,255,0)"
+        c.fillStyle = "rgb(0,0,0)"
         c.fillText(this.text, this.x - 5, this.y + 5)
     }
 }
@@ -69,18 +69,18 @@ export default class GamepadTester extends GameElement {
         //  draw a circle for each axis
         for (let i = 0; i < this.axes.length; i += 2) {
             let x = this.axes[i]
-            let y = this.axes[i+1]
+            let y = this.axes[i + 1]
             let radius = 100
             let originX = 200 + radius + (radius + 20) * i
             let originY = 250
-            c.fillStyle = "rgb(200,0,0)"
+            c.fillStyle = "rgb(237, 204, 161)"
             c.beginPath()
             c.arc(originX, originY, radius, 0, Math.PI * 2)
             c.fill()
             // draw relative direction.
-            c.fillStyle = "rgb(0,200,0)"
+            c.fillStyle = "rgb(183, 155, 119)"
             c.beginPath()
-            let stickX = originX + x * radius 
+            let stickX = originX + x * radius
             let stickY = originY + y * radius
             c.arc(stickX, stickY, radius / 4, 0, Math.PI * 2)
             c.fill()
