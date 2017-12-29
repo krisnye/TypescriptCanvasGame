@@ -30,6 +30,8 @@ class TestBullet extends GameElement {
         c.beginPath()
         c.arc(this.x, this.y, radius, 0, Math.PI * 2)
         c.fill()
+        c.fillStyle = "rgb(255,255,0)"
+        c.fillText(this.text, this.x - 5, this.y + 5)
     }
 }
 
@@ -57,7 +59,8 @@ export default class GamepadTester extends GameElement {
     }
 
     fireBullet(x: number, y: number, dx: number, dy: number, text: string) {
-        Game.current.elements.push(new TestBullet(x, y, dx, dy, text))
+        let speed = 100 // in pixels per second
+        Game.current.elements.push(new TestBullet(x, y, dx * speed, dy * speed, text))
     }
 
     render(c: CanvasRenderingContext2D) {

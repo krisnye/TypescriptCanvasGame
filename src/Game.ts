@@ -21,11 +21,12 @@ export default class Game {
         //  get last update time
         let currentTime = performance.now()
         let lastUpdateTime = this.lastUpdateTime || currentTime
-        let timeChange = currentTime - lastUpdateTime
+        let timeChangeMilliseconds = currentTime - lastUpdateTime
+        let timeChangeSeconds = timeChangeMilliseconds / 1000
         //  store new update time
         this.lastUpdateTime = currentTime
 
-        this.update(timeChange)
+        this.update(timeChangeSeconds)
         this.render(c)
         this.requestNextFrame()
     }
