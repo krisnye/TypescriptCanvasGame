@@ -1,0 +1,13 @@
+{
+    "name": "typescriptcanvasgame",
+    "version": "0.0.0",
+    "repository": "https://github.com/krisnye/TypescriptCanvasGame.git",
+    "scripts": {
+        "build": "tsc -p .",
+        "watch": "tsc -p . --watch & nodemon server.js"
+    },
+    "dependencies": {
+        "typescript": "^2.6.2",
+        "express": "^4.13.3"
+    }
+}
