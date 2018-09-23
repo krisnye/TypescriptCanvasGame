@@ -4,7 +4,7 @@ import GameElement from "./GameElement"
 export default class Game {
     static current: Game
     canvas: HTMLCanvasElement
-    lastUpdateTime: number | null
+    lastUpdateTime: number | null = null
     elements: GameElement[] = []
     constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas

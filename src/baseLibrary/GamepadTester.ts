@@ -38,9 +38,9 @@ class TestBullet extends GameElement {
 // a simple example GameElement that only renders itself out as a filled rectangle.
 export default class GamepadTester extends GameElement {
     number: number = 0
-    previousButtons: number[]
-    buttons: number[]
-    axes: number[]
+    previousButtons: number[] = []
+    buttons: number[] = []
+    axes: number[] = []
     constructor(number: number) {
         super()
         this.number = number

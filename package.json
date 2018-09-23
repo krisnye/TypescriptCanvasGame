@@ -3,11 +3,21 @@
     "version": "0.0.0",
     "repository": "https://github.com/krisnye/TypescriptCanvasGame.git",
     "scripts": {
-        "build": "tsc -p .",
-        "watch": "tsc -p . --watch & nodemon server.js"
+        "build": "tsc -c",
+        "start": "node lib/app/server/main.js",
+        "watch": "tsc -w & webpack-dev-server --mode=development"
+    },
+    "engines": {
+        "node": "8.x.x"
     },
     "dependencies": {
-        "typescript": "^2.6.2",
-        "express": "^4.13.3"
+        "express": "^4.16.3"
+    },
+    "devDependencies": {
+        "@types/express": "^4.16.0",
+        "typescript": "^3.0.1",
+        "webpack": "^4.19.1",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.8"
     }
 }
